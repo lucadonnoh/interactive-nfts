@@ -508,7 +508,7 @@ abi = [
 
 w3.eth.defaultAccount = w3.eth.accounts[0]
 
-contract_address = "0x0A5Ce161Aaa43956e36A0BE7E591Bf8193F889a6"
+contract_address = "0x782A050fAA63b4Dbb83Dc9D37a1d84DB7be5A237"
 
 contract = w3.eth.contract(
     address=contract_address,
