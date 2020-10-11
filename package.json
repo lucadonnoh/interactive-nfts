@@ -7,6 +7,7 @@
     "start": "sirv public"
   },
   "devDependencies": {
+    "@openzeppelin/contracts": "^3.2.0",
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
     "rollup": "^2.3.4",
@@ -17,6 +18,7 @@
   },
   "dependencies": {
     "p5": "^1.1.9",
-    "sirv-cli": "^1.0.0"
+    "sirv-cli": "^1.0.0",
+    "solc": "^0.7.3"
   }
 }
