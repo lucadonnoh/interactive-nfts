@@ -1,4 +1,7 @@
 node_modules
+ethereum/build
+ethereum/node_modules
 frontend/public/build
+frontend/node_modules
 *.env
 .DS_Store
