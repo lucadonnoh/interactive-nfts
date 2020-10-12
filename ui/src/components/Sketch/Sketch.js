@@ -9,6 +9,17 @@ class Sketch extends React.Component {
   }
 
   componentDidMount() {
+    this.renderSketch();
+  }
+
+  componentDidUpdate() {
+    this.renderSketch();
+  }
+
+  renderSketch() {
+    // clear
+    document.getElementById(this.props.id).innerHTML = "";
+    
     try {
       // convert the string to a runnable function
       let s = new Function(`return ${this.props.sketch}`)();
@@ -22,7 +33,9 @@ class Sketch extends React.Component {
 
   render() {
     return (
-      <div id={this.props.id} className="sketch" />
+      <div className="sketch-preview">
+        <div id={this.props.id} className="sketch" />
+      </div>
     );
   }
 }
