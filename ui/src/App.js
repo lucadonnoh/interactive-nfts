@@ -8,6 +8,7 @@ import './App.css';
 import initWeb3 from "./web3";
 import initContract from "./InteractiveNFT";
 
+import {line, clock, whiteBox} from './sketches';
 
 var mintCounter = 0;
 
@@ -59,7 +60,10 @@ class App extends React.Component {
       <div className="App">
         <h1>Interactive NFT</h1>
         <button onClick={this.mintEmpty}>Mint</button>
-        <Sketch sketch={"test"}/>
+
+        <Sketch id="sketch1" sketch={line}/>
+        <Sketch id="sketch2" sketch={clock}/>
+        <Sketch id="sketch3" sketch={whiteBox}/>
       </div>
     );
   }
