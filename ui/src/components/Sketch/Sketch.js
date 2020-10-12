@@ -13,7 +13,7 @@ class Sketch extends React.Component {
 
   render() {
     return (
-      <div className="sketch">
+      <div className="sketch-preview">
         {this.props.sketch}
       </div>
     );
