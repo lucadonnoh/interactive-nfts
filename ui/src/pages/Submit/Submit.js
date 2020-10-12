@@ -7,7 +7,7 @@ import './Submit.css';
 import initWeb3 from "services/web3";
 import initContract from "services/InteractiveNFT";
 
-import { Button, Form, Message } from 'semantic-ui-react';
+import { Button, Form, Message, TextArea } from 'semantic-ui-react';
 
 import Head from 'next/head';
 
@@ -60,7 +60,35 @@ class Submit extends React.Component {
         .catch((error) => {
           er = error.message;
         });
-        this.setState({ errorMessage: er});
+      this.setState({ errorMessage: er });
+    } catch (err) {
+      this.setState({ errorMessage: err.message });
+    }
+  }
+
+  mintDummy = async (event) => {
+    event.preventDefault();
+    let er = "";
+
+    const URI = 'https://api.npoint.io/53dc19b07f3572f3ba57';
+
+    console.log(URI);
+
+    try {
+
+      await this.state.InteractiveNFT
+        .methods
+        .mint(URI)
+        .send({
+          from: this.state.defaultAccount
+        })
+        .on('transactionHash', function (hash) {
+          console.log(hash);
+        })
+        .catch((error) => {
+          er = error.message;
+        });
+      this.setState({ errorMessage: er });
     } catch (err) {
       this.setState({ errorMessage: err.message });
     }
@@ -78,10 +106,10 @@ class Submit extends React.Component {
         <Head><title>INFT</title></Head>
         <div className="submit-page">
           <h1>Create an INFT</h1>
-          <Form onSubmit={this.mintEmpty} error={!!this.state.errorMessage}>
+          <Form onSubmit={this.mintDummy} error={!!this.state.errorMessage}>
             <div className="sketch-container">
 
-              <textarea
+              <TextArea
                 id="sketch-code"
                 className="sketch-code"
                 onChange={this.handleTextAreaChange}
