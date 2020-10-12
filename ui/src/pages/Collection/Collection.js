@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './Collection.css';
+import Layout from '../../components/Layout';
 
 class Collection extends React.Component {
 
@@ -10,9 +11,11 @@ class Collection extends React.Component {
 
   render() {
     return (
+      <Layout>
       <div className="collection">
         <h1>Collection</h1>
       </div>
+      </Layout>
     );
   }
 }

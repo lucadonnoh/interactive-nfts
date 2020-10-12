@@ -2,6 +2,7 @@ import React from 'react';
 
 import logo from 'assets/logo.svg';
 import './MarketPlace.css';
+import Layout from '../../components/Layout';
 
 class MarketPlace extends React.Component {
 
@@ -17,9 +18,11 @@ class MarketPlace extends React.Component {
 
   render() {
     return (
-      <div className="MarketPlace">
-        <h1>Market Place</h1>
-      </div>
+      <Layout>
+        <div className="MarketPlace">
+          <h1>Welcome to INFT!</h1>
+        </div>
+      </Layout>
     );
   }
 }
