@@ -1,6 +1,7 @@
-node_modules
 ethereum/node_modules
-frontend/public/build
-frontend/node_modules
+ethereum/package-lock.json
+ui/build
+ui/node_modules
+ui/package-lock.json
 *.env
 .DS_Store
