@@ -1,4 +1,4 @@
-import InteractiveNFT from './InteractiveNFT.json';
+import InteractiveNFT from 'utils/InteractiveNFT.json';
 
 const initContract = (w3) => {
   try {
